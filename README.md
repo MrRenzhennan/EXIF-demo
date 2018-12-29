@@ -1,3 +1,5 @@
+以上demo可以解决图片自动旋转问题
+
 # EXIF exif.js
 
 用于从图像文件中读取EXIF元数据的JavaScript库。  
