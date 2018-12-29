@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="./jquery-1.7.2.min.js"></script>
+		<script src="./exif.min.js"></script>
+	</head>
+
+	<body>
+		
+		<img src="images/1.jpg" id="J-logo" />
+		<script type="text/javascript">
+		var getor = function() {
+			EXIF.getData(document.getElementById("J-logo"), function() {
+				var orp = EXIF.getTag(this, 'Orientation');
+				if(orp == 1) {
+					$("#J-logo").css("transform", "rotate(0deg)")
+				} else if(orp == 3) {
+					$("#J-logo").css("transform", "rotate(180deg)");
+				} else if(orp == 6) {
+					$("#J-logo").css("transform", "rotate(90deg)");
+				} else if(orp == 8) {
+					$("#J-logo").css("transform", "rotate(270deg)");
+				}
+			});
+		}
+		setTimeout('getor()', 1);
+		</script>
+	</body>
+
+</html>
