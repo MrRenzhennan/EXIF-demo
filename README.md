@@ -15,8 +15,8 @@ npm install exif-js --save
 ## Usage
 该包添加了一个全局EXIF变量(或AMD或CommonJS等效变量)  
 首先调用EXIF.getData函数。 您将图像作为参数传递给它：  
-1. 来自<img src =“image.jpg”>的图像  
-2. 或者用户在页面上<input type =“file”>元素中选择的图像。  
+1. 来自`<img src =“image.jpg”>`的图像  
+2. 或者用户在页面上`<input type =“file”>`元素中选择的图像。  
   
   
 作为第二个参数，您可以指定回调函数。 在回调函数中，您应该使用它来访问具有上述元数据的图像，然后您可以根据需要使用它们。 该图像现在有一个额外的exifdata属性，它是一个带有EXIF元数据的Javascript对象。 您可以访问它的属性以获取图像标题，拍摄照片的日期或方向等数据。  
